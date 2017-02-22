@@ -31,7 +31,7 @@ class WSGIRawBody(object):
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=config.TEMPLATES_PATH)
 
 from werkzeug.contrib.fixers import ProxyFix
 app.wsgi_app = WSGIRawBody(ProxyFix(app.wsgi_app))
@@ -52,6 +52,7 @@ if config.BUGSNAG_KEY:
         use_ssl = True
     )
     handle_exceptions(app)
+
 
 from filters import *
 app.jinja_env.filters['status_class'] = status_class
