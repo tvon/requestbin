@@ -31,7 +31,7 @@ class WSGIRawBody(object):
 
 
 
-app = Flask(__name__, template_folder=config.TEMPLATES_PATH)
+app = Flask(__name__, template_folder=config.TEMPLATES_PATH, static_folder=config.STATIC_PATH)
 
 from werkzeug.contrib.fixers import ProxyFix
 app.wsgi_app = WSGIRawBody(ProxyFix(app.wsgi_app))

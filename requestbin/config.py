@@ -5,11 +5,11 @@ if os.environ.get("DEBUG"):
     DEBUG = True
 
 LOG_LEVEL = os.environ.get("LOG_LEVEL", "DEBUG")
-REALM = os.environ.get("REALM", "local")
 ROOT_URL = os.environ.get("ROOT_URL", "http://localhost:4000")
 PORT_NUMBER = os.environ.get("PORT", 4000)
 FLASK_SESSION_SECRET_KEY = os.environ.get("SESSION_SECRET_KEY", "N1BKhJLnBqLpexOZdklsfDKFJDKFadsfs9a3r324YB7B73AglRmrHMDQ9RhXz35")
 TEMPLATES_PATH = os.environ.get("TEMPLATES_PATH", "templates")
+STATIC_PATH = os.environ.get("STATIC_PATH", "static")
 
 BIN_TTL = 48*3600
 MAX_RAW_SIZE = 1024*10
