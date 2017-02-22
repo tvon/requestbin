@@ -76,3 +76,8 @@ app.add_url_rule('/api/v1/stats', 'api.stats')
 # app.add_url_rule('/robots.txt', redirect_to=url_for('static', filename='robots.txt'))
 
 from requestbin import api, views
+
+import logging
+handler = logging.StreamHandler()
+app.logger.addHandler(handler)
+app.logger.setLevel(config.LOG_LEVEL)

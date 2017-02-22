@@ -1,5 +1,6 @@
 from requestbin import config
 import os
+import logging
 
 from requestbin import app
 
